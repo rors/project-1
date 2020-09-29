@@ -37,7 +37,7 @@ for term in about_tweets_list:
         if "https:" in tweet:
             tweet = " ".join([i for i in tweet.split() if 'https:' not in i])
 
-        if message.id not in already_tweeted:
+        if str(message.id) not in already_tweeted:
             try:
                 #api.update_status(tweet)
                 print(message.id + ": " + tweet)
